@@ -1,0 +1,1155 @@
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+Token: Keyword        Lexeme: int
+<OptDeclarationList> -> <Declaration List> 
+<DeclarationList> -> <Declaration> ; 
+<Declaration> -> <Qualifier > <IDs>  
+Qualifier -> int
+
+Token: Identifier     Lexeme: sum
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: a
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: real
+<DeclarationList> -> <Declaration> ; 
+<Declaration> -> <Qualifier > <IDs>  
+Qualifier -> real
+
+Token: Identifier     Lexeme: b
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+
+Token: Identifier     Lexeme: a
+<StatementList> -> <Statement> 
+<Statement> ->  <Assign>
+<Assign> ->   <Identifier> = <Expression> ;
+
+Token: Operator       Lexeme: =
+
+Token: Integer        Lexeme: 5
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Identifier     Lexeme: b
+<StatementList> -> <Statement> 
+<Statement> ->  <Assign>
+<Assign> ->   <Identifier> = <Expression> ;
+
+Token: Operator       Lexeme: =
+
+Token: Real           Lexeme: 2.5
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Real> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Identifier     Lexeme: mSum
+<StatementList> -> <Statement> 
+<Statement> ->  <Assign>
+<Assign> ->   <Identifier> = <Expression> ;
+
+Token: Operator       Lexeme: =
+
+Token: Identifier     Lexeme: a
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: +
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  + <Term> <ExpressionPrime>
+
+Token: Identifier     Lexeme: b
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Keyword        Lexeme: put
+<StatementList> -> <Statement> 
+<Statement> ->  <Print>
+<Print> -> put ( <Expression>);
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: mSum
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: ;
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+Token: Keyword        Lexeme: real
+<OptDeclarationList> -> <Declaration List> 
+<DeclarationList> -> <Declaration> ; 
+<Declaration> -> <Qualifier > <IDs>  
+Qualifier -> real
+
+Token: Identifier     Lexeme: school
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: work
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: get
+<StatementList> -> <Statement> 
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: school
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: work
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: school
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Identifier     Lexeme: work
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: put
+<StatementList> -> <Statement> 
+<Statement> ->  <Print>
+<Print> -> put ( <Expression>);
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: school
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: ;
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: else
+else  <Statement>  ifend
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: put
+<StatementList> -> <Statement> 
+<Statement> ->  <Print>
+<Print> -> put ( <Expression>);
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: work
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: ;
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: ifend
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+
+
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+
+
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Identifier     Lexeme: amount
+<Return> -> return <Expression>;
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: +
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  + <Term> <ExpressionPrime>
+
+Token: Identifier     Lexeme: amount
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: *
+<TermPrime> ->  *<Factor> <TermPrime> 
+
+Token: Real           Lexeme: 0.2
+<Factor> -> <Primary>
+<Primary> -> <Real> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: else
+else  <Statement>  ifend
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Identifier     Lexeme: amount
+<Return> -> return <Expression>;
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: +
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  + <Term> <ExpressionPrime>
+
+Token: Identifier     Lexeme: amount
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: *
+<TermPrime> ->  *<Factor> <TermPrime> 
+
+Token: Real           Lexeme: 0.15
+<Factor> -> <Primary>
+<Primary> -> <Real> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: ifend
+
+Token: Separator      Lexeme: }
+
+Token: Separator      Lexeme: $$
+
+Token: Keyword        Lexeme: int
+<OptDeclarationList> -> <Declaration List> 
+<DeclarationList> -> <Declaration> ; 
+<Declaration> -> <Qualifier > <IDs>  
+Qualifier -> int
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: get
+<StatementList> -> <Statement> 
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: get
+<StatementList> -> <Statement> 
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: while
+<StatementList> -> <Statement> 
+<Statement> ->  <While>
+<While> -> while ( <Condition>  )  <Statement>  whileend
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: <
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> <
+Token: Integer        Lexeme: 1
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Keyword        Lexeme: get
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: whileend
+
+Token: Keyword        Lexeme: put
+<StatementList> -> <Statement> 
+<Statement> ->  <Print>
+<Print> -> put ( <Expression>);
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: tipCalculator
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: (
+ ( <IDs> )
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: ;
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+
+
+
+
+Token: Separator      Lexeme: $$
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+
+Token: Keyword        Lexeme: return
+<OptDeclarationList> -> <Empty>
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Integer        Lexeme: 5
+<Return> -> return;
+
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Real           Lexeme: 0.2
+<Return> -> return;
+
+
+
+
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Real           Lexeme: 0.2
+<Return> -> return;
+
+
+
+
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Real           Lexeme: 0.2
+<Return> -> return;
+
+
+
+
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Identifier     Lexeme: amount
+<Return> -> return <Expression>;
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: +
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  + <Term> <ExpressionPrime>
+
+Token: Identifier     Lexeme: amount
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: *
+<TermPrime> ->  *<Factor> <TermPrime> 
+
+Token: Real           Lexeme: 0.2
+<Factor> -> <Primary>
+<Primary> -> <Real> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: else
+else  <Statement>  ifend
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Identifier     Lexeme: amount
+<Return> -> return <Expression>;
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: +
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  + <Term> <ExpressionPrime>
+
+Token: Identifier     Lexeme: amount
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: *
+<TermPrime> ->  *<Factor> <TermPrime> 
+
+Token: Real           Lexeme: 0.15
+<Factor> -> <Primary>
+<Primary> -> <Real> 
+
+Token: Separator      Lexeme: ;
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: }
+
+Token: Keyword        Lexeme: ifend
+
+Token: Separator      Lexeme: }
+
+Token: Separator      Lexeme: $$
+
+Token: Keyword        Lexeme: int
+<OptDeclarationList> -> <Declaration List> 
+<DeclarationList> -> <Declaration> ; 
+<Declaration> -> <Qualifier > <IDs>  
+Qualifier -> int
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: get
+<StatementList> -> <Statement> 
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: get
+<StatementList> -> <Statement> 
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: while
+<StatementList> -> <Statement> 
+<Statement> ->  <While>
+<While> -> while ( <Condition>  )  <Statement>  whileend
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: <
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> <
+Token: Integer        Lexeme: 1
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Keyword        Lexeme: get
+<Statement> ->  <Scan>
+<Scan> -> get ( <IDs> );
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: level
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: ;
+
+Token: Keyword        Lexeme: whileend
+
+Token: Keyword        Lexeme: put
+<StatementList> -> <Statement> 
+<Statement> ->  <Print>
+<Print> -> put ( <Expression>);
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: tipCalculator
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Separator      Lexeme: (
+ ( <IDs> )
+
+Token: Identifier     Lexeme: totalAmount
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: ;
+
+
+Token: Keyword        Lexeme: function
+<Rat18F> -> <Opt Function Definitions>   $$  <Opt Declaration List>  <Statement List> $$
+<OptFunctionDefinition> -> <Function Definitions>
+<Function Definitions> -> <Function>
+ <Function> -> function  <Identifier>   ( <Opt Parameter List> )  <Opt Declaration List>  <Body>
+
+Token: Identifier     Lexeme: tipCalculator
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: amount
+<OptParameterList> -> <Parameter List> 
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: ,
+
+Token: Identifier     Lexeme: levelSatisfy
+<ParameterList> -> <Parameter> 
+<Parameter> ->  <IDs > : <Qualifier> 
+<IDs> -> <Identifier> 
+
+Token: Separator      Lexeme: :
+
+Token: Keyword        Lexeme: int
+Qualifier -> int
+
+Token: Separator      Lexeme: )
+
+Token: Separator      Lexeme: {
+<OptDeclarationList> -> <Empty>
+<Body> -> {  < Statement List>  }
+
+Token: Keyword        Lexeme: if
+<StatementList> -> <Statement> 
+<Statement> ->  <If>
+<If> -> if  ( <Condition>  ) <Statement>  
+
+Token: Separator      Lexeme: (
+
+Token: Identifier     Lexeme: levelSatisfy
+<Condition> ->  <Expression>  <Relop>   <Expression>
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> -> <Identifier> 
+
+Token: Operator       Lexeme: >
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+ <Relop> -> >
+Token: Integer        Lexeme: 2
+<Expression> -> <Term> <EpressionPrime>
+<Term> -> <Factor> <TermPrime>
+<Factor> -> <Primary>
+<Primary> ->  <Integer> 
+
+Token: Separator      Lexeme: )
+<TermPrime> ->  <Empty>
+<ExpressionPrime> ->  <Empty>
+
+Token: Separator      Lexeme: {
+<Statement> ->  <Compound>
+<Compound> ->  {  <Statement List>  }
+
+Token: Keyword        Lexeme: return
+<StatementList> -> <Statement> 
+<Statement> ->  <Return>
+
+Token: Real           Lexeme: 0.2
+<Return> -> return;
+
+
+
+
+
+

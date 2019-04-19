@@ -1,0 +1,10 @@
+[*Test Case 1*]
+
+$$
+int sum, a;
+real b;
+a = 5;
+b = 2.5;
+mSum = a + b; 
+put(mSum);
+$$

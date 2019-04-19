@@ -1,0 +1,17 @@
+[*Test Case 2*]
+
+$$
+real school, work; 
+
+	get (school, work);
+
+ if  ( school > work  ) 
+ { 
+	put(school);
+ }
+ else
+ {
+	put(work);
+ }
+ ifend
+ $$

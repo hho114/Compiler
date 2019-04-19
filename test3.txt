@@ -1,0 +1,29 @@
+[*Test Case 3*]
+
+ function tipCalculator (amount : int, levelSatisfy: int )
+{
+	
+	if(levelSatisfy > 2)
+	{
+		return  amount + amount * 0.3;
+	}
+	else
+	{
+		return amount + amount * 0.15;
+	}
+    ifend 
+}
+
+
+$$
+    int totalAmount, levelSatisfy;
+
+	get(totalAmount);
+	get(level);
+	while(level < 1)
+	get(level);
+	whileend
+	
+	put(tipCalculator(totalAmount,levelSatisfy));
+
+ $$
